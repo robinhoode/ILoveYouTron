@@ -1,10 +1,6 @@
 
 #include "TriangulatedSphere.h"
 
-void TriangulatedSphere::vertex(double x, double y, double z) {
-    glVertex3f((float) x, (float) y, (float) z);        
-}
-
 void TriangulatedSphere::draw() {
     scalar = 100;
  
@@ -30,16 +26,12 @@ void TriangulatedSphere::drawWireframe(int scalar) {
 
     glEnable(GL_BLEND); {
 	   glBlendFunc(GL_SRC_ALPHA, GL_ONE);
-
 	   glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-	   //    glEnable(GL_POLYGON_OFFSET_LINE); {
+
 	   glBegin(GL_TRIANGLES); {
 		  glColor3f(0.0, 0.0, 1.0);
 		  drawVertices(scalar);
 	   } glEnd();
-	   //    } glDisable(GL_POLYGON_OFFSET_LINE); 
-	   //    glPolygonMode(GL_FRONT_AND_BACK,GL_FILL); 
-	   //    glEnable(GL_LIGHTING); 
     } glDisable(GL_BLEND);
 }
 

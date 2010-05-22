@@ -6,6 +6,7 @@
 #include "ofx3DModelLoader.h"
 #include "OuterGrid.h"
 #include "TriangulatedSphere.h"
+#include "TriangulatedCylinder.h"
 
 class testApp : public ofBaseApp {
 	
@@ -21,6 +22,7 @@ public:
     ofxEasyCam camera;
     OuterGrid outerGrid;
     TriangulatedSphere sphere;
+    TriangulatedCylinder cylinder, cylinder2;
 
     void cameraInit();
     void lightingInit();

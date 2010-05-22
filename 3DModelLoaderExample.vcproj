@@ -211,6 +211,22 @@
 				>
 			</File>
 			<File
+				RelativePath=".\src\ThreeDShape.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\ThreeDShape.h"
+				>
+			</File>
+			<File
+				RelativePath=".\src\TriangulatedCylinder.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\TriangulatedCylinder.h"
+				>
+			</File>
+			<File
 				RelativePath=".\src\TriangulatedSphere.cpp"
 				>
 			</File>

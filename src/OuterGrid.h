@@ -2,26 +2,29 @@
 #define _OUTER_GRID
 
 #include "ofMain.h"
+#include "ThreeDShape.h"
 
-class OuterGrid {
+class OuterGrid : ThreeDShape {
 
 public:
-    int boxSize;
-    int spacing;
+    int boxSize, spacing, boxCount;
+
 
     OuterGrid() {
         boxSize = 1000;
         spacing = 100;
+        setup();        
     }
  
     OuterGrid(int b, int s) {
 	   boxSize = b;
 	   spacing = s;
+        setup();        
     }
 
-    void draw();
+    void setup();
 
-    void vertex(float x, float y, float z);
+    void draw();
 
     void topWall(int i);
     void bottomWall(int i);
@@ -29,6 +32,13 @@ public:
     void leftWall(int i);
     void backWall(int i);
     void frontWall(int i);
+
+    void topGrid(int i, int j);
+    void bottomGrid(int i, int j);
+    void rightGrid(int i, int j);
+    void leftGrid(int i, int j);
+    void backGrid(int i, int j);
+    void frontGrid(int i, int j);
     
 };
 

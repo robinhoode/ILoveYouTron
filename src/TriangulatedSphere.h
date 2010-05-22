@@ -1,8 +1,12 @@
+#ifndef _TRIANGULATED_SPHERE
+#define _TRIANGULATED_SPHERE
+
 #include "ofMath.h"
 #include "ofMain.h"
 #include "ofConstants.h"
+#include "ThreeDShape.h"
 
-class TriangulatedSphere {
+class TriangulatedSphere : ThreeDShape {
 
 public:
 
@@ -21,8 +25,6 @@ public:
 
     void doRotations();
 
-    void vertex(double, double, double);
-
     void draw();
 
     void drawVertices(int scalar);
@@ -33,3 +35,5 @@ public:
     void drawTopTriangle(double, double, double, double, double);
     void drawBottomTriangle(double, double, double, double, double);
 };
+
+#endif

@@ -75,7 +75,8 @@ void testApp::setup(){
 
 //    sphere    = TriangulatedSphere();
     outerGrid = OuterGrid(boxSize, spacing);
-
+    cylinder  = TriangulatedCylinder(1500, 2);
+    cylinder2 = TriangulatedCylinder(2000, 3);
 
     /* Black background */
     ofBackground(0,0,0);    		
@@ -114,6 +115,8 @@ void testApp::draw() {
     cameraBeginDraw(); {
         outerGrid.draw();
         sphere.draw();
+        cylinder.draw();
+        cylinder2.draw();
     } cameraEndDraw();
 
     // ofSetColor(0x000000);
